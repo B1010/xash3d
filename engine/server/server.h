@@ -267,6 +267,8 @@ typedef struct sv_client_s
 	int resources_count;
 } sv_client_t;
 
+
+
 /*
 =============================================================================
  a client can leave the server in one of four ways:
@@ -688,5 +690,13 @@ void Log_Open( void );
 void Log_InitCvars( void );
 void SV_SetLogAddress_f( void );
 void SV_ServerLog_f( void );
+
+//
+// sv_filter.c
+//
+void SV_InitFilter( void );
+void SV_ShutdownFilter( void );
+// qboolean SV_CheckIP( netadr_t *adr );
+qboolean SV_CheckID( const char *id );
 
 #endif//SERVER_H
